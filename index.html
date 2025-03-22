@@ -1,21 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random shit</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Nah</h1>
-    </header>
-    <main>
-        <p>wqoih</p>
-    </main>
-    <footer>
-        <p>&copy; </p>
-    </footer>
-    <script src="scripts.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Random shit</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body style="font-family: 'Times New Roman', Times, serif">
+		<!-- <header cl>
+        <h1></h1>
+    </header> -->
+		<main>
+			<p>IDK</p>
+			<!-- Added canvas for maze generation -->
+			<canvas id="mazeCanvas"></canvas>
+		</main>
+		<footer>
+			<a href="https://github.com/5U5H4NTH006/" target="_blank"
+				>Github profile</a
+			>
+		</footer>
+		<script src="scripts.js"></script>
+		<script>
+			// Prompt the user to input the desired maze dimension (e.g., "40" for a 40x40 maze)
+			let dimension = parseInt(
+				prompt("Enter maze dimension (e.g. 40 for a 40x40 maze):", "40"),
+				10
+			);
+			// Check if the input is not a valid number or is less than or equal to 0
+			if (isNaN(dimension) || dimension <= 0) {
+				// Notify the user that the input is invalid and default value will be used
+				alert("Invalid dimension. Using default dimension of 40.");
+				// Set the maze dimension to 40 since the input was invalid
+				dimension = 40;
+			}
+
+			// Define the size of each maze cell in pixels
+			const cellSize = 20;
+			// Retrieve the canvas element by its ID
+			const canvas = document.getElementById("mazeCanvas");
+			// Set the canvas width based on the maze dimension and individual cell size
+			canvas.width = dimension * cellSize;
+			// Set the canvas height similarly to match a square grid
+			canvas.height = dimension * cellSize;
+
+			// Get the 2D drawing context from the canvas for rendering the maze
+			const ctx = canvas.getContext("2d");
+			// Set the stroke color for drawing grid lines to black
+			ctx.strokeStyle = "#000";
+
+			// Loop from 0 to the maze dimension inclusive to draw the grid lines
+			for (let i = 0; i <= dimension; i++) {
+				// Draw a vertical grid line
+				ctx.beginPath(); // Start a new path for the vertical line
+				ctx.moveTo(i * cellSize, 0); // Move the pen to the start position (x coordinate, top of canvas)
+				ctx.lineTo(i * cellSize, canvas.height); // Draw a line vertically down to the bottom of the canvas
+				ctx.stroke(); // Render the vertical line on the canvas
+
+				// Draw a horizontal grid line
+				ctx.beginPath(); // Start a new path for the horizontal line
+				ctx.moveTo(0, i * cellSize); // Move the pen to the start position (y coordinate, left edge of canvas)
+				ctx.lineTo(canvas.width, i * cellSize); // Draw a line horizontally to the right edge of the canvas
+				ctx.stroke(); // Render the horizontal line on the canvas
+			}
+		</script>
+	</body>
 </html>
