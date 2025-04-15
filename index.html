@@ -1,27 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Sushanth Mantrala</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Particles effect -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Hello there, I am Sushanth</h1>
-    </header>
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>I am Sushanth and I am a human</p>
-        </section>
-        <section>
-            <h2>Achievements</h2>
-            <p> oops</p>
-        </section>
-    </main>
-    <footer>
-        <p>Hello there this the footer.</p>
-    </footer>
+        <!-- Background particles -->
+        <div id="particles-js"></div>
+        
+        <!-- Visit and click counter display -->
+        <div class="stats-container">
+            <div id="visitCount">Visits: 0</div>
+            <div id="clickCount">Clicks: 0</div>
+        </div>
+        
+        <!-- Scroll to top button -->
+        <button id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+        
+        <div class="container trackable">
+        <div class="nav-section trackable" id="navPanel">
+            <h1 class="name trackable">Sushanth Mantrala</h1>
+            <div class="navigation trackable">
+                <div class="nav-item active trackable" data-section="about"><a href="#about">About</a></div>
+                <div class="nav-item trackable" data-section="education"><a href="#education">Education</a></div>
+                <div class="nav-item trackable" data-section="birthplace"><a href="#birthplace">Birthplace</a></div>
+                <div class="nav-item trackable" data-section="achievements"><a href="#achievements">Achievements</a></div>
+                <div class="nav-item trackable" data-section="skills"><a href="#skills">Skills</a></div>
+            </div>
+        </div>
+        
+        <div class="content-section trackable">
+         <div class="profile-picture-container profile-picture-visible trackable">
+            <div class="profile-picture-placeholder trackable">
+               <img src="images/image2.jpg" alt="Profile Picture" width="250" height="250" class="trackable">
+            </div> 
+         </div>
+
+            <section id="about" class="content-block active-section trackable">
+                <h2 class="trackable">About Me</h2>
+                <p class="trackable">I am Sushanth Mantrala, currently pursuing my B.Tech in Computer Science + M.S in Computational Natural Sciences at the International Institute of Information Technology, Hyderabad (IIIT-H).</p>
+                
+                <p class="trackable">I like Gaming, Music, Running, Solving mazes, Philosophy and playing chess.</p>
+                
+                <p class="trackable">I like messing with stuff to learn about how they work.</p>
+                
+                <div class="cv-link-container trackable">
+                    <a href="https://iiithydresearch-my.sharepoint.com/:b:/g/personal/sushanth_mantrala_research_iiit_ac_in/Eeb8LjDS8XdCg85_w6yqxX4B4meXcLOiW_SmIqBiPIojng?e=SPAGLr" class="cv-link trackable" target="_blank"><i class="fas fa-file-pdf"></i> Download My CV</a>
+                </div>
+            </section>
+            
+            <!-- Education section -->
+            <section id="education" class="content-block trackable">
+                <h2 class="trackable">Education</h2>
+                <p class="trackable"><span class="highlight">Currently pursuing BTech in Computer Science and M.S in Computational Natural Sciences at IIIT-H</span></p>
+                <ul class="education-list trackable">
+                    <li class="trackable">2010-2012: Faculty School, Guwahati, Assam</li>
+                    <li class="trackable">2013-2014: Kendriya Vidyalaya, Gachibowli, Hyderabad </li>
+                    <li class="trackable">2014-2017: Kendriya Vidyalaya, Mysuru, Hyderabad</li>
+                    <li class="trackable">2017-2019: Kendriya Vidyalaya, Picket, Hyderabad</li>
+                    <li class="trackable">2019-2022: FIITJEE World School Dilsukhnagar, Hyderabad</li>
+                    <li class="trackable">2022-2024: Dhruva Public School, Delhi</li>
+                    <li class="trackable">2024-Present: International Institute of Information Technology, Hyderabad </li>
+                </ul>
+            </section>
+            
+            <section id="birthplace" class="content-block trackable">
+                <h2 class="trackable">Birthplace</h2>
+                <p class="trackable">I was born in Chennai, Tamil Nadu. Here are some photos:</p>
+                <div class="images trackable">
+                    <img src="https://images.unsplash.com/photo-1580968668595-57ce9c12e1d2?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    width="200" height="270" class="trackable">
+                    <img src="https://images.unsplash.com/photo-1644852037516-95c8fba481f9?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="300" height="270" class="trackable">
+                    <img src="https://images.unsplash.com/photo-1637080618498-b4a1cad84ae0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="450" height="300" class="trackable">
+                </div>
+            </section>
+            
+            <section id="achievements" class="content-block trackable">
+                <h2 class="trackable">Achievements</h2>
+                <ul class="achievement-list trackable">
+                    <li class="trackable">2018: 2 Golds in KVS regionals U-14 in skating (Quads)- Hyderabad Region → Selected for Nationals but couldn't participate :(</li>
+                    <li class="trackable">
+                        Annual Mysuru Dasara Art exhibition:
+                        <ul>
+                            <li class="trackable">2015: 2nd prize in Pencil Sketch</li>
+                            <li class="trackable">2016: 1st prize in Glass painting</li>
+                            <li class="trackable">2017: Consolation prize in Warli Painting</li>
+                        </ul>
+                    </li>
+                    <li class="trackable">2017: Ranked 8th (U-11 Category) in Nalwadi Krishna Raja Wodeyar Inter-district Rapid Chess Tournament</li>
+                    <li class="trackable" id="rir">2024: <a href="https://youtu.be/xvFZjo5PgG0?si=Tri8yEErE9xvtlBg" target="_blank" class="trackable">Dark Souls 3 Speedrun - 1.5 hrs</a> (World Record Attempt)</li>
+                </ul>
+            </section>
+            
+            <!-- My skills -->
+            <section id="skills" class="content-block trackable">
+                <h2 class="trackable">Skills</h2>
+                <ul class="skills-list trackable">
+                    <li class="trackable">
+                        <div class="skill-header trackable">
+                            <div class="skill-name trackable"><i class="fab fa-cuttlefish"></i> C++</div>
+                            <div class="skill-percentage trackable">20%</div>
+                        </div>
+                        <div class="skill-bar trackable">
+                            <div class="skill-progress trackable" style="width: 20%;"></div>
+                        </div>
+                    </li>
+                    <li class="trackable">
+                        <div class="skill-header trackable">
+                            <div class="skill-name trackable"><i class="fab fa-cuttlefish"></i> C</div>
+                            <div class="skill-percentage trackable">60%</div>
+                        </div>
+                        <div class="skill-bar trackable">
+                            <div class="skill-progress trackable" style="width: 60%;"></div>
+                        </div>
+                    </li>
+                    <li class="trackable">
+                        <div class="skill-header trackable">
+                            <div class="skill-name trackable"><i class="fab fa-python"></i> Python</div>
+                            <div class="skill-percentage trackable">20%</div>
+                        </div>
+                        <div class="skill-bar trackable">
+                            <div class="skill-progress trackable" style="width: 20%;"></div>
+                        </div>
+                    </li>
+                    <li class="trackable">
+                        <div class="skill-header trackable">
+                            <div class="skill-name trackable"><i class="fab fa-html5"></i> HTML</div>
+                            <div class="skill-percentage trackable">50%</div>
+                        </div>
+                        <div class="skill-bar trackable">
+                            <div class="skill-progress trackable" style="width: 50%;"></div>
+                        </div>
+                    </li>
+                    <li class="trackable">
+                        <div class="skill-header trackable">
+                            <div class="skill-name trackable"><i class="fab fa-css3-alt"></i> CSS</div>
+                            <div class="skill-percentage trackable">40%</div>
+                        </div>
+                        <div class="skill-bar trackable">
+                            <div class="skill-progress trackable" style="width: 40%;"></div>
+                        </div>
+                    </li>
+                    <li class="trackable">
+                        <div class="skill-header trackable">
+                            <div class="skill-name trackable"><i class="fab fa-js"></i> JavaScript</div>
+                            <div class="skill-percentage trackable">20%</div>
+                        </div>
+                        <div class="skill-bar trackable">
+                            <div class="skill-progress trackable" style="width: 20%;"></div>
+                        </div>
+                    </li>
+                    <li class="trackable">
+                        <div class="skill-header trackable">
+                            <div class="skill-name trackable"><i class="fab fa-envira"></i> MongoDB</div>
+                            <div class="skill-percentage trackable">75%</div>
+                        </div>
+                        <div class="skill-bar trackable">
+                            <div class="skill-progress trackable" style="width: 75%;"></div>
+                        </div>
+                    </li>
+                    <li class="trackable">
+                        <div class="skill-header trackable">
+                            <div class="skill-name trackable"><i class="fas fa-database"></i> MySQL</div>
+                            <div class="skill-percentage trackable">78%</div>
+                        </div>
+                        <div class="skill-bar trackable">
+                            <div class="skill-progress trackable" style="width: 78%;"></div>
+                        </div>
+                    </li>
+                    <li class="trackable">
+                        <div class="skill-header trackable">
+                            <div class="skill-name trackable"><i class="fas fa-file-code"></i> LaTeX</div>
+                            <div class="skill-percentage trackable">60%</div>
+                        </div>
+                        <div class="skill-bar trackable">
+                            <div class="skill-progress trackable" style="width: 60%;"></div>
+                        </div>
+                    </li>
+                    <li class="trackable">
+                        <div class="skill-header trackable">
+                            <div class="skill-name trackable"><i class="fas fa-atom"></i> VMD</div>
+                            <div class="skill-percentage trackable">30%</div>
+                        </div>
+                        <div class="skill-bar trackable">
+                            <div class="skill-progress trackable" style="width: 30%;"></div>
+                        </div>
+                    </li>
+                    <li class="trackable">
+                        <div class="skill-header trackable">
+                            <div class="skill-name trackable"><i class="fas fa-terminal"></i> BASH</div>
+                            <div class="skill-percentage trackable">65%</div>
+                        </div>
+                        <div class="skill-bar trackable">
+                            <div class="skill-progress trackable" style="width: 65%;"></div>
+                        </div>
+                    </li>
+                    <li class="trackable">
+                        <div class="skill-header trackable">
+                            <div class="skill-name trackable"><i class="fas fa-flask"></i> Gaussian</div>
+                            <div class="skill-percentage trackable">40%</div>
+                        </div>
+                        <div class="skill-bar trackable">
+                            <div class="skill-progress trackable" style="width: 40%;"></div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    
+    <!-- Text analyzer tool thingy -->
+    <div class="analysis-section trackable">
+        <h2 class="trackable">Text Analysis Tool</h2>
+        <textarea id="textInput" class="trackable" rows="20" cols="80" placeholder="Paste your text here (minimum 10,000 words required)..."></textarea>
+        <br>
+        <button onclick="processText()" id="analyzeBtn" class="trackable">Process Text</button>
+        <div id="results" class="trackable"></div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="particles-config.js"></script>
+    
+    <footer class="footer trackable">
+      <div class="footer-content trackable">
+          <div class="footer-icons trackable">
+              <a href="https://github.com/5U5H4NTH006" class="footer-icon trackable" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/sushanth-mantrala-735a80316/" class="footer-icon trackable" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <p class="footer-copyright trackable">© 2025 Sushanth Mantrala.</p>
+      </div>
+  </footer>
 </body>
 </html>
