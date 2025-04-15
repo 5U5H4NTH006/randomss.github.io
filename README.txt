@@ -1,8 +1,5 @@
 # Website Project README
 
-## Project Overview
-This is a personal website for Sushanth Mantrala, created for a course assignment at IIIT Hyderabad.
-
 ## Features Implemented
 - Interactive personal portfolio website
 - Responsive design that works on different screen sizes
